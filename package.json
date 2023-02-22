@@ -1,0 +1,30 @@
+{
+  "name": "chatapplication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BR7YAN/chatApplication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BR7YAN/chatApplication/issues"
+  },
+  "homepage": "https://github.com/BR7YAN/chatApplication#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "js-sha256": "^0.9.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.2"
+  }
+}
