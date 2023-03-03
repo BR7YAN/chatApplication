@@ -7,6 +7,7 @@ app.use(express.urlencoded({extended: true}));
 
 //Bring in the routes
 app.use(require("./routes/user"));
+app.use(require("./routes/chatroom"));
 
 //Setup Error Handlers
 const errHandlers = require("./handlers/errorHandlers");
