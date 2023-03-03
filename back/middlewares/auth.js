@@ -13,6 +13,4 @@ module.exports = async (req, res, next) => {
             message: "Forbidden!"
         })
     }
-
-
 }
