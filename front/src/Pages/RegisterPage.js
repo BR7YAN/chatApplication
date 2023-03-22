@@ -19,6 +19,11 @@ const RegisterPage = () => {
         }).then(response => {
             console.log(response.data);
             makeToast("success", response.data.message);
+            if (response.status === 201) {
+              window.setTimeout(() => {
+                window.location.href = "http://localhost:3000/login";
+              }, 3000)
+            }
         }).catch(err => {
             makeToast("success", err.response.data.message);
         });

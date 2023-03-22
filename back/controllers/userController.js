@@ -29,7 +29,7 @@ exports.register = async (req, res) => {
         password: sha256(password + process.env.SALT )});
     await user.save();
 
-    res.json({
+    res.status(201).json({
         message: "User [" + name + "] registered successfully"
     });
 };
@@ -37,7 +37,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
     const { email, password } = req.body;
     
-    const user = await  User.find({
+    const user = await  User.findOne({
         email,
         password: sha256(password + process.env.SALT),
     });
@@ -46,7 +46,7 @@ exports.login = async (req, res) => {
         throw "Email and Password did not match.";
     const token = await jwt.sign({id: user.id}, process.env.SECRET);
 
-    res.json({
+    res.status(200).json({
         message: "User logged in succesfully.",
         token,
     })

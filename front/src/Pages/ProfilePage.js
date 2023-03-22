@@ -1,8 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import {userContext} from '../App';
 import "../Styles/profile.css"
 
+
 const ProfilePage = () => {
+    const value = React.useContext(userContext);
+    console.log("nome temporaneo == ", value.name);
     return (
     <div className="card_profile">
     <img className="circular_image" src="https://media-assets.wired.it/photos/615daa8d10023c62ea4761a0/master/pass/765b31b47db31884ab90e2caeba74673.jpg" alt="John" />
