@@ -12,6 +12,7 @@ const LoginPage = () => {
 
     console.log("nome temporaneo == ", value.name);
     value.name = 'ok';
+    //localStorage.setItem('data', JSON.stringify(...value, value.name = 'ok'));
     console.log("nome temporaneo == ", value.name);
 
     const loginUser = (props) => {
